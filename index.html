@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workout Schedule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Workout Schedule</h1>
+      <p class="subtitle">Build your weekly plan from your favorite exercises</p>
+    </header>
+
+    <section class="panel" id="exercises-panel">
+      <h2>My Exercises</h2>
+      <form id="add-exercise-form" class="add-exercise-form">
+        <input
+          type="text"
+          id="new-exercise-input"
+          placeholder="e.g. Push-ups"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="exercise-list" class="exercise-list"></ul>
+    </section>
+
+    <section class="panel" id="schedule-panel">
+      <h2>Weekly Schedule</h2>
+      <div id="schedule-grid" class="schedule-grid"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
