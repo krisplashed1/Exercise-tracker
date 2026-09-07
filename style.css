@@ -1,0 +1,195 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f6f8;
+  --panel-bg: #ffffff;
+  --border: #e0e2e7;
+  --text: #1f2430;
+  --text-muted: #6b7280;
+  --accent: #3b6ef6;
+  --accent-hover: #2f56cc;
+  --danger: #e0575f;
+  --danger-hover: #c8434b;
+  --chip-bg: #eef2ff;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.add-exercise-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.add-exercise-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.add-exercise-form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.add-exercise-form button:hover {
+  background: var(--accent-hover);
+}
+
+.exercise-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.exercise-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--chip-bg);
+  border-radius: 999px;
+  padding: 6px 10px 6px 14px;
+  font-size: 14px;
+}
+
+.exercise-list .remove-exercise {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 2px 4px;
+}
+
+.exercise-list .remove-exercise:hover {
+  color: var(--danger);
+}
+
+.exercise-list .empty-hint {
+  color: var(--text-muted);
+  font-size: 14px;
+  background: transparent;
+  padding: 0;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.day-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-card h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.day-exercise-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-height: 8px;
+}
+
+.day-exercise-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.day-exercise-list .remove-from-day {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.day-exercise-list .remove-from-day:hover {
+  color: var(--danger);
+}
+
+.day-picker {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  background: #fff;
+}
+
+.no-exercises-note {
+  font-size: 13px;
+  color: var(--text-muted);
+}
